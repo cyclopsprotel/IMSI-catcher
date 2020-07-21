@@ -64,9 +64,9 @@ Run
 
 	kal -s GSM900
 ***
-kal: Scanning for GSM-900 base stations. /n
-GSM-900: /n
-	chan:   14 (937.8MHz + 10.449kHz)	power: 3327428.82
+kal: Scanning for GSM-900 base stations.  
+GSM-900:  
+	chan:   14 (937.8MHz + 10.449kHz)	power: 3327428.82  
 	chan:   15 (938.0MHz + 4.662kHz)	power: 3190712.41
 ***
   
