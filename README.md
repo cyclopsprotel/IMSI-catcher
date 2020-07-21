@@ -27,7 +27,7 @@ then
 
 ## Run
 
-## For headless Raspberry Pi with HackRF
+### For headless Raspberry Pi with HackRF
 
 Open 2 terminals and ssh into your Raspberry Pi:
 
