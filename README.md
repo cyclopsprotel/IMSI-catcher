@@ -36,6 +36,8 @@ In terminal 2:
 
 	python grgsm_livemon_headless.py -f 945.4M -s 8000000
 	
+	#Recieving amp is enabled by default in this version, be aware.
+	
 You can now watch the output in terminal 1, and raw data (mostly 2b) in terminal 2. Change frequency as desired.
 
   
