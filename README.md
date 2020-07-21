@@ -12,24 +12,34 @@ This program shows you IMSI numbers, country, brand and operator of cellphones a
   
 ## Setup
 
-### Headless Raspberry PI
+### Headless Raspberry Pi
 
-git clone https://github.com/Oros42/IMSI-catcher.git
+ssh into your Raspberry Pi and:
 
-sudo apt install python3-numpy python3-scipy python3-scapy
+	git clone https://github.com/Oros42/IMSI-catcher.git
+
+then
+
+	sudo apt install python3-numpy python3-scipy python3-scapy
+
+then
 
 
 ## Run
 
 ## For headless Raspberry Pi with HackRF
 
-Open 2 terminals:
+Open 2 terminals and ssh into your Raspberry Pi:
 
 In terminal 1:
+
+	cd IMSI-catcher
 
 	sudo python3 simple_IMSI-catcher.py
 
 In terminal 2:
+
+	cd IMSI-catcher
 
 	python grgsm_livemon_headless.py -f 945.4M -s 8000000
 	
