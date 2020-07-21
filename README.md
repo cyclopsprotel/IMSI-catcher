@@ -16,6 +16,10 @@ This program shows you IMSI numbers, country, brand and operator of cellphones a
 
 ssh into your Raspberry Pi and:
 
+Install gr-gsm from here: https://osmocom.org/projects/gr-gsm/wiki/Installation
+
+then
+
 	git clone https://github.com/Oros42/IMSI-catcher.git
 
 then
