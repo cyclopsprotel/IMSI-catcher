@@ -1,4 +1,4 @@
-# IMSI-catcher
+# IMSI-catcher for Raspberry PI with HackRF
 This program shows you IMSI numbers, country, brand and operator of cellphones around you.  
   
 /!\ This program was made to understand how GSM network work. Not for bad hacking !  
@@ -9,44 +9,35 @@ This program shows you IMSI numbers, country, brand and operator of cellphones a
 
 ## What you need
 
-1 PC  
-1 [USB DVB-T key (RTL2832U)](https://osmocom.org/projects/sdr/wiki/rtl-sdr) with antenna (less than 15$) or a [OsmocomBB phone](https://osmocom.org/projects/baseband/wiki/Phones)   or [HackRF](https://greatscottgadgets.com/hackrf/)  
+1 Raspberry Pi
+1 [HackRF](https://greatscottgadgets.com/hackrf/)  
   
   
 ## Setup
 
-You have the choice with 2 types of install.  
+### Headless Raspberry PI
 
-### version 1 in your OS
-```
 git clone https://github.com/Oros42/IMSI-catcher.git
-# or wget https://github.com/Oros42/IMSI-catcher/archive/master.zip && unzip -q master.zip
 
 sudo apt install python3-numpy python3-scipy python3-scapy
-```
-
-For Debian Testing (10) and Ubuntu 18.04+ :  
-See https://osmocom.org/projects/gr-gsm/wiki/Installation  
-
-For older Debian and Ubuntu :  
-```
-sudo add-apt-repository -y ppa:ptrkrysik/gr-gsm
-sudo apt update
-sudo apt install gr-gsm
-```
-If gr-gsm failled to setup. Try this setup : https://github.com/ptrkrysik/gr-gsm/wiki/Installation  
-Debian : https://tracker.debian.org/pkg/gr-gsm  
-
-
-### version 2 with Docker
-
-```bash
-docker pull atomicpowerman/imsi-catcher
-docker run -ti --net=host -e DISPLAY=$DISPLAY --privileged -v /dev/bus/usb:/dev/bus/usb  atomicpowerman/imsi-catcher bash
-```
 
 
 ## Run
+
+## For headless Raspberry Pi with HackRF
+
+Open 2 terminals:
+
+In terminal 1:
+
+	sudo python3 simple_IMSI-catcher.py
+
+In terminal 2:
+
+	python grgsm_livemon_headless.py -f 945.4M -s 8000000
+	
+You can now watch the output in terminal 1, and raw data (mostly 2b) in terminal 2. Change frequency as desired.
+
   
 ### With an old version of gr-gsm
   
