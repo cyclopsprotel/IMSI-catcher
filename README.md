@@ -20,7 +20,7 @@ Install gr-gsm from here: https://osmocom.org/projects/gr-gsm/wiki/Installation
 
 then
 
-	git clone https://github.com/Oros42/IMSI-catcher.git
+	git clone https://github.com/hbsagen/IMSI-catcher.git
 
 then
 
