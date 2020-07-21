@@ -2,10 +2,6 @@
 This program shows you IMSI numbers, country, brand and operator of cellphones around you.  
   
 /!\ This program was made to understand how GSM network work. Not for bad hacking !  
-  
-
-![screenshot0](capture_simple_IMSI-catcher.png)  
-  
 
 ## What you need
 
