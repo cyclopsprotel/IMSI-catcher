@@ -6,6 +6,7 @@ This program shows you IMSI numbers, country, brand and operator of cellphones a
 ## What you need
 
 1 Raspberry Pi
+
 1 [HackRF](https://greatscottgadgets.com/hackrf/)  
   
   
@@ -32,7 +33,7 @@ In terminal 2:
 
 	python grgsm_livemon_headless.py -f 945.4M -s 8000000
 	
-	#Recieving amp is enabled by default in this version, be aware.
+#Recieving amp is enabled by default in this version, be aware.
 	
 You can now watch the output in terminal 1, and raw data (mostly 2b) in terminal 2. Change frequency as desired.
 
