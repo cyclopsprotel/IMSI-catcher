@@ -1,22 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Author: Oros
+# Author:
 # Contributors :
 #  puyoulu
 #  1kali2kali
 #  petterreinholdtsen
 #  nicoeg
 #  dspinellis
+#  Oros
 #  fdl <Frederic.Lehobey@proxience.com>
 # 2020-01-31
 # License : CC0 1.0 Universal
-
-"""
-This program shows you IMSI numbers of cellphones around you.
-
-
-/!\ This program was made to understand how GSM network work. Not for bad hacking !
-"""
 
 import ctypes
 import json
@@ -151,7 +145,13 @@ class tracker:
 		self.sqlcon.execute("CREATE TABLE IF NOT EXISTS observations(stamp datetime, tmsi1 text, tmsi2 text, imsi text, imsicountry text, imsibrand text, imsioperator text, mcc integer, mnc integer, lac integer, cell integer);")
 
 	def output(self, cpt, tmsi1, tmsi2, imsi, imsicountry, imsibrand, imsioperator, mcc, mnc, lac, cell, now, packet=None):
-		print("{:7s} ; {:10s} ; {:10s} ; {:17s} ; {:12s} ; {:10s} ; {:21s} ; {:4s} ; {:5s} ; {:6s} ; {:6s} ; {:s}".format(str(cpt), tmsi1, tmsi2, imsi, imsicountry, imsibrand.encode("utf-8"), imsioperator.encode("utf-8"), str(mcc), str(mnc), str(lac), str(cell), now.isoformat()))
+		print("{:7s} ; {:10s} ; {:10s} ; {:17s} ; {:12s} ; {:10s} ; {:21s} ; {:4s} ; {:5s} ; {:6s} ; {:6s} ; {:s}".format(str(cpt), tmsi1, tmsi2, imsi, imsicountry, imsibrand.encode("utf-8"), imsioperator.encode("utf-8"), str(mcc), str(mnc), str(lac), str(cell), now.isoformat(), "Linje 154"))
+		a1=str(cpt)
+		f=open("IMSI.txt", "a+")
+		f.write( "%s ; %s ; %s ; %s ; %s ; %s ; %s ; %s ; %s ; %s ; %s ; %s \n" % (cpt, tmsi1, tmsi2, imsi, imsicountry, imsibrand.encode("utf-8"), imsioperator.encode("utf-8"), mcc, mnc, lac, cell, now.isoformat()) )
+		f.close()
+		
+		a1=""
 
 	def pfields(self, cpt, tmsi1, tmsi2, imsi, mcc, mnc, lac, cell, packet=None):
 		imsicountry=""
