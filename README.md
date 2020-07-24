@@ -1,7 +1,7 @@
-# IMSI-catcher for Raspberry Pi with HackRF
+# Passive IMSI-catcher for Raspberry Pi with HackRF
 This program shows you IMSI numbers, country, brand and operator of cellphones around you.  
   
-/!\ This program was only made to understand how GSM network work /!\
+/!\ This program was only made to understand how GSM networks work and will NOT transmitt nor disrupt GSM traffic /!\
 
 ## What you need
 
